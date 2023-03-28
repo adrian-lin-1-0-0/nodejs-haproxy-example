@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    build: ./backend
+  haproxy:
+    build: ./haproxy
+    ports:
+      - '8001:8001'
+  web:
+    build: ./web
+    ports:
+      - '8000:8000'
